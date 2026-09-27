@@ -1,27 +1,239 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weltkarte | Chroniken von Aetheria</title>
-  <style>
-    :root{--bg:#0f1117;--panel:#171b24;--text:#f2eadc;--muted:#aaa49b;--gold:#d7a95d;--light:#f1ce82;--line:rgba(241,206,130,.18)}
-    *{box-sizing:border-box}body{margin:0;color:var(--text);background:radial-gradient(circle at 15% 0%,rgba(215,169,93,.13),transparent 32rem),var(--bg);font-family:Inter,system-ui,sans-serif;line-height:1.6}.wrap{width:min(1200px,calc(100% - 40px));margin:auto}a{color:inherit;text-decoration:none}
-    header{position:sticky;top:0;z-index:10;background:rgba(15,17,23,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font:18px Georgia,serif}.sigil{width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--light)}nav{display:flex;gap:18px;color:var(--muted);font-size:14px}nav a:hover{color:var(--light)}
-    main{padding:65px 0 80px}h1,h2{font-family:Georgia,serif;font-weight:500;line-height:1.15}h1{font-size:clamp(42px,7vw,70px);margin:0 0 14px}.intro{color:var(--muted);font-size:18px;max-width:720px}.map-card{margin-top:32px;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:0 20px 55px rgba(0,0,0,.28)}.map-wrap{position:relative;overflow:hidden;border-radius:10px;line-height:0}.map-wrap img{display:block;width:100%;height:auto}.map-link{position:absolute;display:block; width: 2.5%; aspect-ratio: 1/1; border:2px solid transparent;border-radius:50%;transition:.2s ease;z-index:1;}.map-link:hover,.map-link:focus-visible{border-color:var(--light);background:rgba(241,206,130,.25);box-shadow:0 0 0 5px rgba(241,206,130,.18),0 0 24px rgba(241,206,130,.7);outline:none}.map-link span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;color:var(--light);font:700 13px/1 Inter,system-ui,sans-serif;text-shadow:0 2px 4px #000,0 0 8px #000;opacity:0;transition:.2s}.map-link:hover span,.map-link:focus-visible span{opacity:1}.hint{display:flex;justify-content:space-between;gap:15px;margin:15px 3px 2px;color:var(--muted);font-size:13px}.legend{margin-top:25px;padding:20px;border:1px solid var(--line);border-radius:12px;background:rgba(23,27,36,.8)}.legend h2{font-size:25px;margin:0 0 7px}.legend p{margin:0;color:var(--muted);font-size:14px}.back{display:inline-block;margin-top:24px;color:var(--light);font-size:14px}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}
-    @media(max-width:650px){.nav{align-items:flex-start;flex-direction:column;padding:14px 0}.hint{display:block}.hint span{display:block;margin-top:5px}.map-link span{font-size:10px}}
-  </style>
-</head>
-<body>
-<header><div class="wrap nav"><a class="brand" href="index.html"><span class="sigil">✦</span>Chroniken von Aetheria</a><nav><a href="index.html">Startseite</a><a href="world.html">Weltkarte</a><a href="charaktere.html">Charaktere</a><a href="abenteuer.html">Abenteuer</a></nav></div></header>
-<main class="wrap">
-  <h1>Die Weltkarte</h1>
-  <p class="intro">Erkunde die bekannten Regionen von Aetheria. Bewege den Mauszeiger über einen markierten Ort und klicke auf den Stadtnamen, um den zugehörigen Wiki-Eintrag zu öffnen.</p>
-  <div class="map-card">
-    <div class="map-wrap">
-      <img src="Img/Weltkarte.jpg" alt="Karte der Welt von Aetheria">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weltkarte | Chroniken von Aeggerron</title>
+    <style>
+      :root {
+        --bg: #0f1117;
+        --panel: #171b24;
+        --text: #f2eadc;
+        --muted: #aaa49b;
+        --gold: #d7a95d;
+        --light: #f1ce82;
+        --line: rgba(241, 206, 130, 0.18);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at 15% 0%,
+            rgba(215, 169, 93, 0.13),
+            transparent 32rem
+          ),
+          var(--bg);
+        font-family: Inter, system-ui, sans-serif;
+        line-height: 1.6;
+      }
+      .wrap {
+        width: min(1200px, calc(100% - 40px));
+        margin: auto;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(15, 17, 23, 0.9);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font:
+          18px Georgia,
+          serif;
+      }
+      .sigil {
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--gold);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--light);
+      }
+      nav {
+        display: flex;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      nav a:hover {
+        color: var(--light);
+      }
+      main {
+        padding: 65px 0 80px;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 500;
+        line-height: 1.15;
+      }
+      h1 {
+        font-size: clamp(42px, 7vw, 70px);
+        margin: 0 0 14px;
+      }
+      .intro {
+        color: var(--muted);
+        font-size: 18px;
+        max-width: 720px;
+      }
+      .map-card {
+        margin-top: 32px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--panel);
+        box-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+      }
+      .map-wrap {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        line-height: 0;
+      }
+      .map-wrap img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .map-link {
+        position: absolute;
+        display: block;
+        width: 2.5%;
+        aspect-ratio: 1/1;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        transition: 0.2s ease;
+        z-index: 1;
+      }
+      .map-link:hover,
+      .map-link:focus-visible {
+        border-color: var(--light);
+        background: rgba(241, 206, 130, 0.25);
+        box-shadow:
+          0 0 0 5px rgba(241, 206, 130, 0.18),
+          0 0 24px rgba(241, 206, 130, 0.7);
+        outline: none;
+      }
+      .map-link span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        color: var(--light);
+        font:
+          700 13px/1 Inter,
+          system-ui,
+          sans-serif;
+        text-shadow:
+          0 2px 4px #000,
+          0 0 8px #000;
+        opacity: 0;
+        transition: 0.2s;
+      }
+      .map-link:hover span,
+      .map-link:focus-visible span {
+        opacity: 1;
+      }
+      .hint {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin: 15px 3px 2px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .legend {
+        margin-top: 25px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(23, 27, 36, 0.8);
+      }
+      .legend h2 {
+        font-size: 25px;
+        margin: 0 0 7px;
+      }
+      .legend p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .back {
+        display: inline-block;
+        margin-top: 24px;
+        color: var(--light);
+        font-size: 14px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 25px 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      @media (max-width: 650px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 14px 0;
+        }
+        .hint {
+          display: block;
+        }
+        .hint span {
+          display: block;
+          margin-top: 5px;
+        }
+        .map-link span {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><span class="sigil">✦</span>Chroniken von Aeggerron</a
+        >
+        <nav>
+          <a href="index.html">Startseite</a><a href="world.html">Weltkarte</a
+          ><a href="charaktere.html">Charaktere</a
+          ><a href="abenteuer.html">Abenteuer</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <h1>Die Weltkarte</h1>
+      <p class="intro">
+        Erkunde die bekannten Regionen von Aeggerron. Bewege den Mauszeiger über einen markierten Ort und klicke auf den Stadtnamen, um den zugehörigen Wiki-Eintrag zu öffnen.
+      </p>
+      <div class="map-card">
+        <div class="map-wrap">
+          <img src="Img/Weltkarte.jpg" alt="Karte der Welt von Aeggerron" />
 
-      <!--
+          <!--
         KLICKBARE ORTE
         =================
         Jeder Ort besitzt eigene Werte für left, top, width und height.
@@ -35,32 +247,77 @@
         Beispiel: Für einen weiteren Ort kopieren und nur diese Werte ändern.
       -->
 
-      <!-- Anduin: Position individuell anpassbar -->
-      <a class="map-link" href="Welt/Städte außerhalb des Empire/anduin.html" aria-label="Anduin öffnen"
-         style="left:15%; top:73%;">
-      </a>
+          <!-- Anduin: Position individuell anpassbar -->
+          <a
+            class="map-link"
+            href="Welt/Städte außerhalb des Empire/anduin.html"
+            aria-label="Anduin öffnen"
+            style="left: 15%; top: 73%"
+          >
+          </a>
 
-      <!-- Beispiel für eine weitere Stadt: Werte und Zielseite ersetzen -->
-      <!--
+          <a
+            class="map-link"
+            href="Welt/Städte im Empire/paion.html"
+            aria-label="Paion öffnen"
+            style="left: 19.3%; top: 60%"
+          >
+          </a>
+
+          <a
+            class="map-link"
+            href="Welt/Städte im Empire/fanghorn.html"
+            aria-label="Fanghorn öffnen"
+            style="left: 28.5%; top: 35%"
+          >
+          </a>
+          <!-- Beispiel für eine weitere Stadt: Werte und Zielseite ersetzen -->
+          <!--
       <a class="map-link" href="fanghorn.html" aria-label="Fanghorn öffnen"
          style="left:25%; top:33%;">
         <span>Fanghorn öffnen</span>
       </a>
       -->
 
-      <!-- Weitere Stadtvorlage -->
-      <!--
+          <!-- Weitere Stadtvorlage -->
+          <!--
       <a class="map-link" href="stadtname.html" aria-label="Stadtname öffnen"
          style="left:0%; top:0%; width:6%; height:5%;">
         <span>Stadtname öffnen</span>
       </a>
       -->
-    </div>
-    <div class="hint"><span>Markierte Orte: <strong>Anduin</strong></span><span>Weitere Orte können direkt im HTML ergänzt werden.</span></div>
-  </div>
-  <div class="legend"><h2>Anduin</h2><p>Die verborgene Waldstadt im Süden des Empire. Klicke auf den markierten Bereich bei Anduin, um die Stadtseite zu öffnen.</p></div>
-  <a class="back" href="dnd_wiki_startseite.html">← Zurück zur Startseite</a>
-</main>
-<footer><div class="wrap">Chroniken von Aetheria · Interaktive Weltkarte</div></footer>
-</body>
+        </div>
+        <div class="hint">
+          <span>Implementierte Orte: <strong>Anduin, Fanghorn, Paion</strong></span
+          >
+        </div>
+      </div>
+      <div class="legend">
+        <h2>Anduin</h2>
+        <p>
+          Die verborgene Waldstadt südlich des Empire.
+        </p>
+      </div>
+
+      <div class="legend">
+        <h2>Fanghorn</h2>
+        <p>
+          Die Handelsstadt im Nordwesten des Empire.
+        </p>
+      </div>
+
+      <div class="legend">
+        <h2>Paion</h2>
+        <p>
+          Die souveränste Magierstadt im Westen des Empire.
+        </p>
+      </div>
+      <a class="back" href="index.html"
+        >← Zurück zur Startseite</a
+      >
+    </main>
+    <footer>
+      <div class="wrap">Chroniken von Aeggerron</div>
+    </footer>
+  </body>
 </html>

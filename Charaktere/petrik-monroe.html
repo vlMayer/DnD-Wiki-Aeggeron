@@ -1,37 +1,574 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Petrik Monroe | Chroniken von Aetheria</title>
-  <style>
-    :root{--bg:#0f1117;--panel:#171b24;--panel2:#1e2430;--text:#f2eadc;--muted:#aaa49b;--gold:#d7a95d;--light:#f1ce82;--red:#b85c5c;--line:rgba(241,206,130,.18)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--text);background:radial-gradient(circle at 10% 0%,rgba(215,169,93,.12),transparent 30rem),radial-gradient(circle at 90% 15%,rgba(184,92,92,.1),transparent 26rem),var(--bg);font-family:Inter,system-ui,sans-serif;line-height:1.65} a{color:inherit;text-decoration:none}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(15,17,23,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font:18px Georgia,serif}.sigil{width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--light)}nav{display:flex;gap:18px;color:var(--muted);font-size:14px}nav a:hover{color:var(--light)}
-    .hero{padding:78px 0 55px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--light);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.hero-grid{display:grid;grid-template-columns:1fr 280px;gap:50px;align-items:center}h1,h2,h3{font-family:Georgia,serif;line-height:1.15;font-weight:500}h1{font-size:clamp(45px,7vw,76px);margin:15px 0 18px}.subtitle{color:var(--muted);font-size:19px;max-width:650px}.portrait{aspect-ratio:1;border:1px solid var(--gold);border-radius:16px;background:linear-gradient(145deg,#393025,#171b24 65%);display:grid;place-items:center;box-shadow:0 0 50px rgba(215,169,93,.14);font:90px Georgia,serif;color:var(--gold)}
-    .layout{display:grid;grid-template-columns:230px 1fr;gap:42px;padding:55px 0 80px}.toc{position:sticky;top:100px;align-self:start;border:1px solid var(--line);border-radius:12px;padding:20px;background:rgba(23,27,36,.7)}.toc strong{font:19px Georgia,serif}.toc a{display:block;padding:8px 0;color:var(--muted);font-size:14px}.toc a:hover{color:var(--light)}section{scroll-margin-top:100px;margin-bottom:54px}h2{font-size:32px;margin:0 0 17px}h3{font-size:23px;margin:26px 0 8px}p{margin:0 0 15px}.muted{color:var(--muted)}.quote{border-left:3px solid var(--gold);padding:15px 20px;margin:22px 0;color:#e9d5ab;background:rgba(215,169,93,.07);font:italic 18px Georgia,serif}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.card{padding:20px;border:1px solid var(--line);border-radius:11px;background:linear-gradient(145deg,rgba(30,36,48,.9),rgba(23,27,36,.9))}.card h3{margin-top:0;font-size:21px}.tag{display:inline-block;padding:4px 9px;border:1px solid var(--line);border-radius:99px;color:var(--light);font-size:12px;margin:3px 4px 3px 0}.timeline{border-left:1px solid var(--line);padding-left:22px}.event{position:relative;margin-bottom:24px}.event:before{content:"";position:absolute;left:-28px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold)}.event strong{color:var(--light)}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}
-    @media(max-width:760px){.nav{align-items:flex-start;flex-direction:column;padding:14px 0}.hero-grid,.layout{grid-template-columns:1fr}.portrait{max-width:230px}.toc{position:static}.cards{grid-template-columns:1fr}}
-  </style>
-</head>
-<body>
-<header><div class="wrap nav"><a class="brand" href="index.html"><span class="sigil">✦</span>Chroniken von Aetheria</a><nav><a href="dnd_wiki_startseite.html">Startseite</a><a href="welt.html">Welt</a><a href="charaktere.html">Charaktere</a><a href="abenteuer.html">Abenteuer</a></nav></div></header>
-<main>
-  <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Charakterakte · Ranger · Monster Hunter</div><h1>Petrik Monroe</h1><p class="subtitle">Ein ruhiger Jäger aus Anduin, Hauptmann wider Willen und Bruder auf der Suche nach seiner verschwundenen Schwester.</p><span class="tag">Bugbear</span><span class="tag">Ranger</span><span class="tag">Monster Hunter</span><span class="tag">Reservekommandant</span></div><div class="portrait" aria-label="Platzhalter für Petriks Porträt">P</div></div></section>
-  <div class="wrap layout">
-    <aside class="toc"><strong>Inhalt</strong><a href="#herkunft">Herkunft &amp; frühe Jahre</a><a href="#gash">Gash und die bleibende Verbindung</a><a href="#verlust">Krankheit, Überfall und Verlust</a><a href="#empire">Dienst im Empire</a><a href="#igor">Ausbildung durch Igor</a><a href="#vantnajokull">Vantnajökull</a><a href="#trupp">Petriks Trupp</a><a href="#persoenlichkeit">Persönlichkeit &amp; Motivation</a><a href="#quirks">Götterglaube &amp; Quirks</a></aside>
-    <article>
-      <section id="herkunft"><h2>Herkunft und frühe Jahre</h2><p>Petrik Monroe wuchs in Anduin auf, dessen Traditionen von Elfen und dem Glauben an das Velthir geprägt waren. Anders als viele seines Volkes entwickelte er früh ein Gespür für Strategie und Geduld. Statt blindwütig zu stürmen, beobachtete er Beute und Feinde, lernte Fallen zu legen und leise zu jagen – Fähigkeiten, die ihn später zum Ranger machten.</p><p>Mit 21 Jahren traf er auf den 16-jährigen Bugbear Gash, einen talentierten, aber ungestümen Jäger. Petrik erkannte sich in ihm wieder und wurde sein Mentor. Fünf Jahre lang zogen sie gemeinsam durch die Wildnis, jagten Monster und schärften ihre Instinkte. Sie entwickelten eine tiefe Verbindung – nicht nur als Lehrer und Schüler, sondern als Brüder.</p><p>Als Gash 21 wurde und Petrik 26, trennten sich ihre Wege. Gash suchte Antworten im Velthir auf Fragen, die Petrik nie richtig verstand, während Petrik in Anduin blieb.</p></section>
-      <section id="gash"><h2>Die bleibende Verbindung zu Gash</h2><p>Trotz der Trennung blieben Petrik und Gash in Kontakt. Sie sahen sich gelegentlich, wenn Gash aus dem Velthir zurückkehrte. Gash zog immer öfter und weiter durch das Velthir, jagte für Gold und Ruhm, während Petrik sein Leben in Anduin weiterführte. Doch sie vergaßen einander nie.</p><p>Als Gash mit 28 Jahren heiratete, war Petrik der Einzige, den er als Trauzeugen haben wollte. Die Hochzeit fand im Velthir statt. Petrik reiste an, obwohl seine Mutter Vessa kürzlich krank geworden war.</p><div class="quote">„Nicht als Mentor, nicht als Anführer – sondern als Bruder.“</div><p>Gashs Hochzeit war einer der letzten Momente, in denen Petrik wirklich lächelte – bevor die Krankheit seiner Mutter, der Überfall und der Verlust seiner Schwester ihn in die Dunkelheit stürzten.</p></section>
-      <section id="verlust"><h2>Krankheit, Überfall und Verlust</h2><p>Mit 29 verschlechterte sich Vessas Zustand. In Anduin gab es keine Medizin für diese seltene Krankheit, also brach Petrik mit seiner Schwester Jana auf, um in der nächsten großen Stadt Medizin zu besorgen.</p><p>Der Rückweg wurde zum Albtraum: Sie wurden überfallen und Jana entführt. Petrik suchte verzweifelt, folgte Spuren und befragte Händler und Söldner, doch er fand keine Spur. Als er ins Dorf zurückkehrte, war es zu spät – seine Mutter war gestorben, weil die Medizin nicht rechtzeitig angekommen war.</p><p>Sein Vater Dellbyrt, geblendet von Schmerz und Wut, wies Petrik alle Schuld zu:</p><div class="quote">„Du warst nicht schnell genug. Nicht stark genug.“</div><p>Diese Worte brannten sich in Petriks Seele ein. Kurz darauf verließ er das Dorf – aus Scham, aber auch mit einem neuen Ziel: Jana zu finden, koste es, was es wolle.</p></section>
-      <section id="empire"><h2>Dienst im Empire</h2><p>Petrik trat nicht aus Loyalität ins Empire ein, sondern aus Pragmatismus. Als Soldat verdiente er Geld für Hinweise, Ausrüstung und Kontakte. Doch als Bugbear stieß er auf tiefen Rassismus. Trotz seiner Fähigkeiten, Disziplin und Führungsqualitäten wurde ihm eine höhere Position verwehrt.</p><p>Dennoch stieg er zum Hauptmann eines kleinen Trupps von fünf Soldaten in Fanghorn auf – eine Leistung, die unter diesen Umständen fast unmöglich war. Dort lernte Petrik, mit Menschen, Elfen und anderen Völkern zu arbeiten, oft gegen deren Vorurteile. Er bewährte sich in Gefechten gegen Banditen, Monster und rebellische Clans. Sein Herz blieb jedoch bei der Suche nach Jana.</p></section>
-      <section id="igor"><h2>Ausbildung durch Igor</h2><p>Petriks größter Förderer wurde Igor. Igor sah in ihm nicht den „wilden Bugbear“, sondern den disziplinierten Krieger, Jäger und Anführer. Unter Igors Ausbildung lernte Petrik Taktiken für kalte Klimazonen, das Überleben in Eis und Schnee sowie den Kampf gegen große, gefährliche Gegner.</p><p>Diese Fähigkeiten machten ihn zu einem erfahrenen Monster Hunter. Gemeinsam kämpften Igor und Petrik in der blutigen Schlacht gegen die Drow.</p></section>
-      <section id="vantnajokull"><h2>Reservekommandant in Vantnajökull</h2><p>Petrik wurde von Fanghorn nach Vantnajökull versetzt, nachdem er mit seinem Trupp einen Schmugglerring aufgedeckt hatte, der Gefangene verschleppte. Obwohl sein direkter Vorgesetzter den Abbruch der Verfolgung befahl, griff Petrik ein, rettete mehrere Gefangene und zerschlug das Lager.</p><p>Dabei fand er Hinweise darauf, dass ein einflussreicher Händler und möglicherweise Beamte aus Fanghorn in die Geschäfte verwickelt waren. Statt ausgezeichnet zu werden, warf man ihm Befehlsverweigerung, unverhältnismäßige Gewalt und mangelnde Eignung für den Dienst in einer Stadt vor. Der Rassismus gegen Bugbears machte es leicht, ihn als unkontrollierbar und wild darzustellen.</p><p>Igor verhinderte eine harte Bestrafung und sorgte dafür, dass Petrik offiziell als Reservekommandant nach Vantnajökull versetzt wurde. Doch auch hier sucht er weiter: nach Jana, nach Spuren der Entführer, nach einem Namen, einem Gesicht, einem Ziel.</p></section>
-      <section id="trupp"><h2>Petriks Trupp</h2><p>Petriks ehemaliger Trupp in Fanghorn bestand aus fünf Soldaten, die mehr durch Loyalität als durch Uniformen zusammengehalten wurden:</p><div class="cards"><div class="card"><h3>Mara Vey</h3><p>Menschliche Spurenleserin. Sie sucht weiterhin nach Informationen über die korrupten Beamten und nach Spuren von Jana.</p></div><div class="card"><h3>Borin Eisenfaust</h3><p>Schweigsamer Zwergen-Schildträger, der Petriks Führung zunächst misstraute, ihn aber durch seine Taten respektierte.</p></div><div class="card"><h3>Lethariel Scheinast</h3><p>Elfische Scharfschützin, die während des Einsatzes die Wachen aus der Distanz ausschaltete.</p></div><div class="card"><h3>Tomas Rell</h3><p>Junger menschlicher Sanitäter. Er wurde schwer verletzt, als er sich schützend vor ein entführtes Kind stellte.</p></div></div><p style="margin-top:20px">Nach Petriks Versetzung wurde der Trupp offiziell aufgelöst. Seine Mitglieder halten jedoch heimlich Kontakt zu ihrem ehemaligen Hauptmann.</p></section>
-      <section id="persoenlichkeit"><h2>Persönlichkeit und Motivation</h2><p>Petrik ist ruhig, beobachtend und fast schon stoisch. Unter der Oberfläche brodeln jedoch Wut, Schuld und ein unstillbarer Beschützerinstinkt. Er hasst es, wenn Schwache ausgebeutet oder Familien auseinandergerissen werden, weil er es selbst erlebt hat.</p><p>Als Monster-Hunter-Ranger jagt er nicht nur Bestien, sondern auch die „Monster“ unter den Zivilisierten: Sklavenhändler, Entführer und korrupte Beamte. Igor hat ihn gelehrt, dass Ehre nicht im Titel liegt, sondern im Handeln.</p><div class="quote">Petrik trägt keine Uniform mit Stolz – aber er trägt seine Verantwortung.</div><p>Er wird nicht aufhören, bis er seine Schwester gefunden hat oder weiß, warum er sie nicht finden kann.</p></section>
-      <section id="quirks"><h2>Götterglaube und kleine Quirks</h2><p>Petrik glaubt nicht an nur einen Gott. Für ihn ist das Gleichgewicht der zwölf Götter entscheidend. Ohne auch nur einen von ihnen könnte die Welt ins Chaos stürzen. Er betet jeweils den Gott an, der zur aktuellen Situation passt.</p><div class="cards"><div class="card"><h3>Petrik liebt</h3><p>Briefe von Gash. Er liest sie mindestens zweimal und bewahrt sie in einem wasserdichten Lederbeutel auf.</p><p>Kartenspiele mit kleinen Einsätzen – nicht wegen des Geldes, sondern weil Soldaten dabei irgendwann aufhören, auf seine Herkunft zu starren.</p></div><div class="card"><h3>Petrik hasst</h3><p>Überhebliche Offiziere, die Befehle geben, ohne selbst Gefahr erlebt zu haben.</p><p>Leere Versprechen. Wer Hilfe ankündigt, sie aber nicht schickt, verliert Petriks Respekt dauerhaft.</p></div><div class="card"><h3>Petrik fürchtet</h3><p>Dass Jana ihn noch braucht, er sie aber wieder zu spät findet.</p><p>Stilles Wasser bei Nacht sowie Ratten und Mäuse, die ihn an Schmugglerlager, Zellen, Krankheit und Gefangenschaft erinnern.</p></div></div></section>
-    </article>
-  </div>
-</main>
-<footer><div class="wrap">Chroniken von Aetheria · Charakterakte Petrik Monroe</div></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Petrik Monroe | Chroniken von Aeggerron</title>
+    <style>
+      :root {
+        --bg: #0f1117;
+        --panel: #171b24;
+        --panel2: #1e2430;
+        --text: #f2eadc;
+        --muted: #aaa49b;
+        --gold: #d7a95d;
+        --light: #f1ce82;
+        --red: #b85c5c;
+        --line: rgba(241, 206, 130, 0.18);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at 10% 0%,
+            rgba(215, 169, 93, 0.12),
+            transparent 30rem
+          ),
+          radial-gradient(
+            circle at 90% 15%,
+            rgba(184, 92, 92, 0.1),
+            transparent 26rem
+          ),
+          var(--bg);
+        font-family: Inter, system-ui, sans-serif;
+        line-height: 1.65;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        width: min(1080px, calc(100% - 40px));
+        margin: auto;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(15, 17, 23, 0.9);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font:
+          18px Georgia,
+          serif;
+      }
+      .sigil {
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--gold);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--light);
+      }
+      nav {
+        display: flex;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      nav a:hover {
+        color: var(--light);
+      }
+      .hero {
+        padding: 78px 0 55px;
+        border-bottom: 1px solid var(--line);
+      }
+      .eyebrow {
+        color: var(--light);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 50px;
+        align-items: center;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: Georgia, serif;
+        line-height: 1.15;
+        font-weight: 500;
+      }
+      h1 {
+        font-size: clamp(45px, 7vw, 76px);
+        margin: 15px 0 18px;
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: 19px;
+        max-width: 650px;
+      }
+      .portrait {
+        aspect-ratio: 1;
+        border: 1px solid var(--gold);
+        border-radius: 16px;
+        background: linear-gradient(145deg, #393025, #171b24 65%);
+        display: grid;
+        place-items: center;
+        box-shadow: 0 0 50px rgba(215, 169, 93, 0.14);
+        font:
+          90px Georgia,
+          serif;
+        color: var(--gold);
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 230px 1fr;
+        gap: 42px;
+        padding: 55px 0 80px;
+      }
+      .toc {
+        position: sticky;
+        top: 100px;
+        align-self: start;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px;
+        background: rgba(23, 27, 36, 0.7);
+      }
+      .toc strong {
+        font:
+          19px Georgia,
+          serif;
+      }
+      .toc a {
+        display: block;
+        padding: 8px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .toc a:hover {
+        color: var(--light);
+      }
+      section {
+        scroll-margin-top: 100px;
+        margin-bottom: 54px;
+      }
+      h2 {
+        font-size: 32px;
+        margin: 0 0 17px;
+      }
+      h3 {
+        font-size: 23px;
+        margin: 26px 0 8px;
+      }
+      p {
+        margin: 0 0 15px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .quote {
+        border-left: 3px solid var(--gold);
+        padding: 15px 20px;
+        margin: 22px 0;
+        color: #e9d5ab;
+        background: rgba(215, 169, 93, 0.07);
+        font:
+          italic 18px Georgia,
+          serif;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      .card {
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        background: linear-gradient(
+          145deg,
+          rgba(30, 36, 48, 0.9),
+          rgba(23, 27, 36, 0.9)
+        );
+      }
+      .card h3 {
+        margin-top: 0;
+        font-size: 21px;
+      }
+      .tag {
+        display: inline-block;
+        padding: 4px 9px;
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        color: var(--light);
+        font-size: 12px;
+        margin: 3px 4px 3px 0;
+      }
+      .timeline {
+        border-left: 1px solid var(--line);
+        padding-left: 22px;
+      }
+      .event {
+        position: relative;
+        margin-bottom: 24px;
+      }
+      .event:before {
+        content: "";
+        position: absolute;
+        left: -28px;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+      .event strong {
+        color: var(--light);
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 25px 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      @media (max-width: 760px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 14px 0;
+        }
+        .hero-grid,
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        .portrait {
+          max-width: 230px;
+        }
+        .toc {
+          position: static;
+        }
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><span class="sigil">✦</span>Chroniken von Aeggerron</a
+        >
+        <nav>
+          <a href="index.html">Startseite</a
+          ><a href="welt.html">Welt</a><a href="charaktere.html">Charaktere</a
+          ><a href="abenteuer.html">Abenteuer</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <div class="eyebrow">Charakterakte · Ranger · Monster Hunter</div>
+            <h1>Petrik Monroe</h1>
+            <p class="subtitle">
+              Ein ruhiger Jäger aus Anduin, Hauptmann wider Willen und Bruder
+              auf der Suche nach seiner verschwundenen Schwester.
+            </p>
+            <span class="tag">Bugbear</span><span class="tag">Ranger</span
+            ><span class="tag">Monster Hunter</span
+            ><span class="tag">Reservekommandant</span>
+          </div>
+          <div class="portrait" aria-label="Platzhalter für Petriks Porträt">
+            P
+          </div>
+        </div>
+      </section>
+      <div class="wrap layout">
+        <aside class="toc">
+          <strong>Inhalt</strong
+          ><a href="#herkunft">Herkunft &amp; frühe Jahre</a
+          ><a href="#gash">Gash und die bleibende Verbindung</a
+          ><a href="#verlust">Krankheit, Überfall und Verlust</a
+          ><a href="#empire">Dienst im Empire</a
+          ><a href="#igor">Ausbildung durch Igor</a
+          ><a href="#vantnajokull">Vantnajökull</a
+          ><a href="#trupp">Petriks Trupp</a
+          ><a href="#persoenlichkeit">Persönlichkeit &amp; Motivation</a
+          ><a href="#quirks">Götterglaube &amp; Quirks</a>
+        </aside>
+        <article>
+          <section id="herkunft">
+            <h2>Herkunft und frühe Jahre</h2>
+            <p>
+              Petrik Monroe wuchs in Anduin auf, dessen Traditionen von Elfen
+              und dem Glauben an das Velthir geprägt waren. Anders als viele
+              seines Volkes entwickelte er früh ein Gespür für Strategie und
+              Geduld. Statt blindwütig zu stürmen, beobachtete er Beute und
+              Feinde, lernte Fallen zu legen und leise zu jagen – Fähigkeiten,
+              die ihn später zum Ranger machten.
+            </p>
+            <p>
+              Mit 21 Jahren traf er auf den 16-jährigen Bugbear Gash, einen
+              talentierten, aber ungestümen Jäger. Petrik erkannte sich in ihm
+              wieder und wurde sein Mentor. Fünf Jahre lang zogen sie gemeinsam
+              durch die Wildnis, jagten Monster und schärften ihre Instinkte.
+              Sie entwickelten eine tiefe Verbindung – nicht nur als Lehrer und
+              Schüler, sondern als Brüder.
+            </p>
+            <p>
+              Als Gash 21 wurde und Petrik 26, trennten sich ihre Wege. Gash
+              suchte Antworten im Velthir auf Fragen, die Petrik nie richtig
+              verstand, während Petrik in Anduin blieb.
+            </p>
+          </section>
+          <section id="gash">
+            <h2>Die bleibende Verbindung zu Gash</h2>
+            <p>
+              Trotz der Trennung blieben Petrik und Gash in Kontakt. Sie sahen
+              sich gelegentlich, wenn Gash aus dem Velthir zurückkehrte. Gash
+              zog immer öfter und weiter durch das Velthir, jagte für Gold und
+              Ruhm, während Petrik sein Leben in Anduin weiterführte. Doch sie
+              vergaßen einander nie.
+            </p>
+            <p>
+              Als Gash mit 28 Jahren heiratete, war Petrik der Einzige, den er
+              als Trauzeugen haben wollte. Die Hochzeit fand im Velthir statt.
+              Petrik reiste an, obwohl seine Mutter Vessa kürzlich krank
+              geworden war.
+            </p>
+            <div class="quote">
+              „Nicht als Mentor, nicht als Anführer – sondern als Bruder.“
+            </div>
+            <p>
+              Gashs Hochzeit war einer der letzten Momente, in denen Petrik
+              wirklich lächelte – bevor die Krankheit seiner Mutter, der
+              Überfall und der Verlust seiner Schwester ihn in die Dunkelheit
+              stürzten.
+            </p>
+          </section>
+          <section id="verlust">
+            <h2>Krankheit, Überfall und Verlust</h2>
+            <p>
+              Mit 29 verschlechterte sich Vessas Zustand. In Anduin gab es keine
+              Medizin für diese seltene Krankheit, also brach Petrik mit seiner
+              Schwester Jana auf, um in der nächsten großen Stadt Medizin zu
+              besorgen.
+            </p>
+            <p>
+              Der Rückweg wurde zum Albtraum: Sie wurden überfallen und Jana
+              entführt. Petrik suchte verzweifelt, folgte Spuren und befragte
+              Händler und Söldner, doch er fand keine Spur. Als er ins Dorf
+              zurückkehrte, war es zu spät – seine Mutter war gestorben, weil
+              die Medizin nicht rechtzeitig angekommen war.
+            </p>
+            <p>
+              Sein Vater Dellbyrt, geblendet von Schmerz und Wut, wies Petrik
+              alle Schuld zu:
+            </p>
+            <div class="quote">
+              „Du warst nicht schnell genug. Nicht stark genug.“
+            </div>
+            <p>
+              Diese Worte brannten sich in Petriks Seele ein. Kurz darauf
+              verließ er das Dorf – aus Scham, aber auch mit einem neuen Ziel:
+              Jana zu finden, koste es, was es wolle.
+            </p>
+          </section>
+          <section id="empire">
+            <h2>Dienst im Empire</h2>
+            <p>
+              Petrik trat nicht aus Loyalität ins Empire ein, sondern aus
+              Pragmatismus. Als Soldat verdiente er Geld für Hinweise,
+              Ausrüstung und Kontakte. Doch als Bugbear stieß er auf tiefen
+              Rassismus. Trotz seiner Fähigkeiten, Disziplin und
+              Führungsqualitäten wurde ihm eine höhere Position verwehrt.
+            </p>
+            <p>
+              Dennoch stieg er zum Hauptmann eines kleinen Trupps von fünf
+              Soldaten in Fanghorn auf – eine Leistung, die unter diesen
+              Umständen fast unmöglich war. Dort lernte Petrik, mit Menschen,
+              Elfen und anderen Völkern zu arbeiten, oft gegen deren Vorurteile.
+              Er bewährte sich in Gefechten gegen Banditen, Monster und
+              rebellische Clans. Sein Herz blieb jedoch bei der Suche nach Jana.
+            </p>
+          </section>
+          <section id="igor">
+            <h2>Ausbildung durch Igor</h2>
+            <p>
+              Petriks größter Förderer wurde Igor. Igor sah in ihm nicht den
+              „wilden Bugbear“, sondern den disziplinierten Krieger, Jäger und
+              Anführer. Unter Igors Ausbildung lernte Petrik Taktiken für kalte
+              Klimazonen, das Überleben in Eis und Schnee sowie den Kampf gegen
+              große, gefährliche Gegner.
+            </p>
+            <p>
+              Diese Fähigkeiten machten ihn zu einem erfahrenen Monster Hunter.
+              Gemeinsam kämpften Igor und Petrik in der blutigen Schlacht gegen
+              die Drow.
+            </p>
+          </section>
+          <section id="vantnajokull">
+            <h2>Reservekommandant in Vantnajökull</h2>
+            <p>
+              Petrik wurde von Fanghorn nach Vantnajökull versetzt, nachdem er
+              mit seinem Trupp einen Schmugglerring aufgedeckt hatte, der
+              Gefangene verschleppte. Obwohl sein direkter Vorgesetzter den
+              Abbruch der Verfolgung befahl, griff Petrik ein, rettete mehrere
+              Gefangene und zerschlug das Lager.
+            </p>
+            <p>
+              Dabei fand er Hinweise darauf, dass ein einflussreicher Händler
+              und möglicherweise Beamte aus Fanghorn in die Geschäfte verwickelt
+              waren. Statt ausgezeichnet zu werden, warf man ihm
+              Befehlsverweigerung, unverhältnismäßige Gewalt und mangelnde
+              Eignung für den Dienst in einer Stadt vor. Der Rassismus gegen
+              Bugbears machte es leicht, ihn als unkontrollierbar und wild
+              darzustellen.
+            </p>
+            <p>
+              Igor verhinderte eine harte Bestrafung und sorgte dafür, dass
+              Petrik offiziell als Reservekommandant nach Vantnajökull versetzt
+              wurde. Doch auch hier sucht er weiter: nach Jana, nach Spuren der
+              Entführer, nach einem Namen, einem Gesicht, einem Ziel.
+            </p>
+          </section>
+          <section id="trupp">
+            <h2>Petriks Trupp</h2>
+            <p>
+              Petriks ehemaliger Trupp in Fanghorn bestand aus fünf Soldaten,
+              die mehr durch Loyalität als durch Uniformen zusammengehalten
+              wurden:
+            </p>
+            <div class="cards">
+              <div class="card">
+                <h3>Mara Vey</h3>
+                <p>
+                  Menschliche Spurenleserin. Sie sucht weiterhin nach
+                  Informationen über die korrupten Beamten und nach Spuren von
+                  Jana.
+                </p>
+              </div>
+              <div class="card">
+                <h3>Borin Eisenfaust</h3>
+                <p>
+                  Schweigsamer Zwergen-Schildträger, der Petriks Führung
+                  zunächst misstraute, ihn aber durch seine Taten respektierte.
+                </p>
+              </div>
+              <div class="card">
+                <h3>Lethariel Scheinast</h3>
+                <p>
+                  Elfische Scharfschützin, die während des Einsatzes die Wachen
+                  aus der Distanz ausschaltete.
+                </p>
+              </div>
+              <div class="card">
+                <h3>Tomas Rell</h3>
+                <p>
+                  Junger menschlicher Sanitäter. Er wurde schwer verletzt, als
+                  er sich schützend vor ein entführtes Kind stellte.
+                </p>
+              </div>
+            </div>
+            <p style="margin-top: 20px">
+              Nach Petriks Versetzung wurde der Trupp offiziell aufgelöst. Seine
+              Mitglieder halten jedoch heimlich Kontakt zu ihrem ehemaligen
+              Hauptmann.
+            </p>
+          </section>
+          <section id="persoenlichkeit">
+            <h2>Persönlichkeit und Motivation</h2>
+            <p>
+              Petrik ist ruhig, beobachtend und fast schon stoisch. Unter der
+              Oberfläche brodeln jedoch Wut, Schuld und ein unstillbarer
+              Beschützerinstinkt. Er hasst es, wenn Schwache ausgebeutet oder
+              Familien auseinandergerissen werden, weil er es selbst erlebt hat.
+            </p>
+            <p>
+              Als Monster-Hunter-Ranger jagt er nicht nur Bestien, sondern auch
+              die „Monster“ unter den Zivilisierten: Sklavenhändler, Entführer
+              und korrupte Beamte. Igor hat ihn gelehrt, dass Ehre nicht im
+              Titel liegt, sondern im Handeln.
+            </p>
+            <div class="quote">
+              Petrik trägt keine Uniform mit Stolz – aber er trägt seine
+              Verantwortung.
+            </div>
+            <p>
+              Er wird nicht aufhören, bis er seine Schwester gefunden hat oder
+              weiß, warum er sie nicht finden kann.
+            </p>
+          </section>
+          <section id="quirks">
+            <h2>Götterglaube und kleine Quirks</h2>
+            <p>
+              Petrik glaubt nicht an nur einen Gott. Für ihn ist das
+              Gleichgewicht der zwölf Götter entscheidend. Ohne auch nur einen
+              von ihnen könnte die Welt ins Chaos stürzen. Er betet jeweils den
+              Gott an, der zur aktuellen Situation passt.
+            </p>
+            <div class="cards">
+              <div class="card">
+                <h3>Petrik liebt</h3>
+                <p>
+                  Briefe von Gash. Er liest sie mindestens zweimal und bewahrt
+                  sie in einem wasserdichten Lederbeutel auf.
+                </p>
+                <p>
+                  Kartenspiele mit kleinen Einsätzen – nicht wegen des Geldes,
+                  sondern weil Soldaten dabei irgendwann aufhören, auf seine
+                  Herkunft zu starren.
+                </p>
+              </div>
+              <div class="card">
+                <h3>Petrik hasst</h3>
+                <p>
+                  Überhebliche Offiziere, die Befehle geben, ohne selbst Gefahr
+                  erlebt zu haben.
+                </p>
+                <p>
+                  Leere Versprechen. Wer Hilfe ankündigt, sie aber nicht
+                  schickt, verliert Petriks Respekt dauerhaft.
+                </p>
+              </div>
+              <div class="card">
+                <h3>Petrik fürchtet</h3>
+                <p>
+                  Dass Jana ihn noch braucht, er sie aber wieder zu spät findet.
+                </p>
+                <p>
+                  Stilles Wasser bei Nacht sowie Ratten und Mäuse, die ihn an
+                  Schmugglerlager, Zellen, Krankheit und Gefangenschaft
+                  erinnern.
+                </p>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        Chroniken von Aetheria · Charakterakte Petrik Monroe
+      </div>
+    </footer>
+  </body>
 </html>
